@@ -13,6 +13,30 @@
   max-width: 1200px;
   margin: 2em auto;
 }
+.highcharts-figure3,
+.highcharts-data-table table {
+  min-width: 310px;
+  max-width: 1200px;
+  margin: 2em auto;
+}
+.highcharts-figure4,
+.highcharts-data-table table {
+  min-width: 310px;
+  max-width: 1200px;
+  margin: 2em auto;
+}
+.highcharts-figure5,
+.highcharts-data-table table {
+  min-width: 310px;
+  max-width: 1200px;
+  margin: 2em auto;
+}
+.highcharts-figure6,
+.highcharts-data-table table {
+  min-width: 310px;
+  max-width: 1200px;
+  margin: 2em auto;
+}
 
 .highcharts-data-table table {
   font-family: Verdana, sans-serif;
