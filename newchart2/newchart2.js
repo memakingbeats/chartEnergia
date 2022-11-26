@@ -368,7 +368,7 @@ Highcharts.chart('container2', {
     },
     
     {
-      name: [("IDracena - 31/03")],
+      name: [("Dracena - 31/03")],
       data: [
         
         
@@ -411,7 +411,7 @@ Highcharts.chart('container2', {
 
     
     {
-      name: [("Getulina - 30/03")],
+      name: [("Guaimbé - 30/03")],
       data: [
         [Date.UTC(2022, 2, 30, 00), 0],[Date.UTC(2022, 2, 30, 1), 0],[
           Date.UTC(2022, 2, 30, 2), 0],[Date.UTC(2022, 2, 30, 3), 0],
@@ -431,7 +431,7 @@ Highcharts.chart('container2', {
 
 
     {
-      name: [("Média Getulina <br> 03/22")],
+      name: [("Média Guaimbé <br> 03/22")],
       data: [
         [Date.UTC(2022, 2, 30, 00),0],[Date.UTC(2022, 2, 30, 1), 0],
           [Date.UTC(2022, 2, 30, 2), 0],[Date.UTC(2022, 2, 30, 3), 0],
@@ -449,7 +449,7 @@ Highcharts.chart('container2', {
            
     },
     {
-      name: [("Getulina - 31/03")],
+      name: [("Guaimbé - 31/03")],
       data: [
         
         
@@ -470,7 +470,7 @@ Highcharts.chart('container2', {
 
     
     {
-      name: [("Média Getulina <br> 03/22")],
+      name: [("Média Guaimbé <br> 03/22")],
       data: [
         [Date.UTC(2022, 2, 31, 00),0],[Date.UTC(2022, 2, 31, 1), 0],
           [Date.UTC(2022, 2, 31, 2), 0],[Date.UTC(2022, 2, 31, 3), 0],
