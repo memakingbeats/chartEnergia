@@ -12,7 +12,8 @@ Highcharts.setOptions({
 });
 Highcharts.chart('container', {
   chart: {
-    type: 'spline'
+    type: 'spline',
+    
   },
   title: {
     text: 'Geração de energia Eólica por Usina (MWmed)'
@@ -21,6 +22,9 @@ Highcharts.chart('container', {
     text: 'Energia Eólica gerada a cada hora do dia - (30/03/22 & 31/03/22)'
   },
   xAxis: {
+    credits: {
+    enabled: 'false'
+},
     alternateGrid: 'true',
     styledMode: 'true',
     type: 'datetime',
@@ -41,6 +45,9 @@ Highcharts.chart('container', {
     }
   },
   yAxis: {
+    credits: {
+    enabled: 'false'
+},
     
     title: {
       text: 'Geração (MWmed)',
@@ -69,6 +76,8 @@ Highcharts.chart('container', {
         enabled: true,
         radius: 2.5,
          inside: true,
+
+         
       }
     }
   },

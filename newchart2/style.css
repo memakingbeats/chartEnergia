@@ -359,7 +359,7 @@ g.highcharts-series,
 .highcharts-legend-point-active .highcharts-point:not(.highcharts-point-hover),
 .highcharts-legend-series-active .highcharts-markers:not(.highcharts-series-hover),
 .highcharts-legend-series-active .highcharts-data-labels:not(.highcharts-series-hover) {
-  opacity: 0.2;
+  opacity: 0.1;
 }
 
 /* Series options */
@@ -585,7 +585,7 @@ g.highcharts-series,
 }
 
 .highcharts-legend-item > text {
-  fill: #a09797;
+  fill: #f3f2f2;
   font-weight: bold;
   font-size: 1em;
   cursor: pointer;
@@ -603,12 +603,12 @@ g.highcharts-series,
 }
 
 .highcharts-legend-nav-active {
-  fill: #d0d5df;
+  fill: #ffffff;
   cursor: pointer;
 }
 
 .highcharts-legend-nav-inactive {
-  fill: #a89595;
+  fill: #fffbfb;
 }
 
 circle.highcharts-legend-nav-active, circle.highcharts-legend-nav-inactive { /* tracker */
@@ -622,7 +622,7 @@ circle.highcharts-legend-nav-active, circle.highcharts-legend-nav-inactive { /* 
 
 /* Bubble legend */
 .highcharts-bubble-legend-symbol {
-  stroke-width: 2;
+  stroke-width: 1;
   fill-opacity: 0.5;
 }
 
@@ -631,7 +631,7 @@ circle.highcharts-legend-nav-active, circle.highcharts-legend-nav-inactive { /* 
 }
 
 .highcharts-bubble-legend-labels {
-  fill: #333333;
+  fill: #ffffff;
 }
 
 /* Loading */
