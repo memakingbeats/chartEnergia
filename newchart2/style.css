@@ -1,6 +1,10 @@
 @import 'https://code.highcharts.com/css/highcharts.css';
 
 
+body{
+  background-color: #f8f9fa;
+}
+
 .highcharts-figure,
 .highcharts-data-table table {
   min-width: 310px;
@@ -80,7 +84,7 @@
 .highcharts-description {
   text-align: center;
   color: #0b0b0b;
-  background-color: #f6f6f7;
+  background-color: #f8f9fa;
   margin-top: 25px;
   margin-bottom: 150px;
   
@@ -93,7 +97,7 @@
 .highcharts-description2 {
   text-align: center;
   color: #0b0b0b;
-  background-color: #f6f6f7;
+  background-color: #f8f9fa;
   margin-top: 25px;
   margin-bottom: 150px;
   
