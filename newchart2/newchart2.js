@@ -30,6 +30,7 @@ Highcharts.chart('container', {
     type: 'datetime',
     alternateGridColor: '#FBFDFF',
     
+    
    
     
 
@@ -73,6 +74,7 @@ Highcharts.chart('container', {
   plotOptions: {
     series: {
       marker: {
+        symbol: 'circle',
         enabled: true,
         radius: 2.5,
          inside: true,
@@ -97,7 +99,7 @@ Highcharts.chart('container', {
         [Date.UTC(2022, 2, 30, 00), 0.547],[Date.UTC(2022, 2, 30, 1), 3.64],[
           Date.UTC(2022, 2, 30, 2), 14.71],[Date.UTC(2022, 2, 30, 3), 18.477],
           [Date.UTC(2022, 2, 30, 4), 13.477],[Date.UTC(2022, 2, 30, 5), 9.87],
-          [Date.UTC(2022, 2, 30, 6), 32.69],[Date.UTC(2022, 2, 30, 7), 100.2],
+          [Date.UTC(2022, 2, 30, 6), 32.69],[Date.UTC(2022, 2, 30, 7), 100.2, ],
           [Date.UTC(2022, 2, 30, 8), 40.10],[Date.UTC(2022, 2, 30, 9), 59.16],
           [Date.UTC(2022, 2, 30, 10), 25.9],[Date.UTC(2022, 2, 30, 11), 9.949],
           [Date.UTC(2022, 2, 30, 12), 14.44],[Date.UTC(2022, 2, 30, 13), 12.98],
@@ -320,6 +322,7 @@ Highcharts.chart('container2', {
   plotOptions: {
     series: {
       marker: {
+        symbol: 'circle',
         enabled: true,
         radius: 2.5,
          inside: true,
@@ -512,44 +515,41 @@ Highcharts.setOptions({
         weekdays: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab']
     }
 });
-Highcharts.chart('container3', {
-  chart: {
-    type: 'scatter',
-    
-  },
+Highcharts.chart("container3", {
+                chart: {
+                    type: "spline",
+                    
+                },
+  
+  
   title: {
     text: 'Icaraí - Média, máximas e picos'
   },
   subtitle: {
     text: 'Energia Eólica produzida em MWmed - referente ao mês de Março de 2022.'
   },
-  xAxis: {
+  xAxis: {     
+    //crosshair: true,
     alternateGrid: 'true',
     styledMode: 'true',
     type: 'datetime',
     alternateGridColor: '#FBFDFF',
     
-   
-    
-
     dateTimeLabelFormats: { // don't display the year
       month: '%e. %b',
       year: '%b',
-      
     },
     title: {
-      text: 'Data'
-      
-      
+      text: ''
+       
     }
   },
   yAxis: {
     
+    
     title: {
       text: 'Geração(MWmed)',
-      style: {
-                color: 'grey'
-            },  
+       
     },
     
   },
@@ -568,141 +568,119 @@ Highcharts.chart('container3', {
 
   plotOptions: {
     series: {
-      marker: {
-        enabled: true,
-        radius: 2.5,
-         inside: true,
+      
+      
+      
+      events: {
+                //click: function () {
+                    //alert('blablabla');
+                //}
+            },
+         
+          marker: {
+         
+          enabled: false,
+          radius: 3.5,
+          inside: true,
+         
       }
+      
     }
   },
 
-  colors: ['#FF6A4A', '#3772BA', '#239B56', '#FF6A4A', '#239B56','#FF6A4A', '#239B56', '#FF6A4A'],
+  colors: ['#FD0202', '#007DFF', '#09FE00','#09FE00',],
 
   // Define the data points. All series have a year of 20222022/71 in order
   // to be compared on the same x axis. Note that in JavaScript, months start
   // at 0 for January, 1 for February etc.
   series: [
-    
-
-    {
-      name: [("Icarai - Média")],
-      showInLegend: true,
-      type:"line",
-      
-      
-      data: [
-        [Date.UTC(2022, 2, '', 00),15.236],[Date.UTC(2022, 2, '', 1), 10.756],
-          [Date.UTC(2022, 2, '', 2), 9.637],[Date.UTC(2022, 2, '', 3), 8.585],
-          [Date.UTC(2022, 2, '', 4), 8.8],[Date.UTC(2022, 2, '', 5), 9.456],
-          [Date.UTC(2022, 2, '', 6),11.889],[Date.UTC(2022, 2, '', 7), 9.743],
-          [Date.UTC(2022, 2, '', 8), 8.401],[Date.UTC(2022, 2, '', 9), 16.278],
-          [Date.UTC(2022, 2, '', 10), 22.7117],[Date.UTC(2022, 2, '', 11), 31.850],
-          [Date.UTC(2022, 2, '', 12), 34.856],[Date.UTC(2022, 2, '', 13), 37.771],
-          [Date.UTC(2022, 2, '', 14), 37.033],[Date.UTC(2022, 2, '', 15), 31.910],
-          [Date.UTC(2022, 2, '', 16), 28.5],[Date.UTC(2022, 2, '', 17), 23.81],
-          [Date.UTC(2022, 2, '', 18), 21.5],[Date.UTC(2022, 2, '', 19), 20.75],
-          [Date.UTC(2022, 2, '', 20), 18.5],[Date.UTC(2022, 2, '', 21), 16.056],
-          [Date.UTC(2022, 2, '', 22), 17.768],[Date.UTC(2022, 2, '', 23), 16.011],
-           ]
-           
-    },
-    {
-      
-      name: [("Icaraí - Banda superior")],
-      type:"line",
-      
-      
-      data: [
-        [Date.UTC(2022, 2, '', 00), 49.052214],[Date.UTC(2022, 2, '', 1), 35.860593],[
-          Date.UTC(2022, 2, '', 2), 30.875333],[Date.UTC(2022, 2, '', 3), 26.730744],
-          [Date.UTC(2022, 2, '', 4), 23.521892],[Date.UTC(2022, 2, '', 5),   24.902830],
-          [Date.UTC(2022, 2, '', 6),  33.076802],[Date.UTC(2022, 2, '', 7),   46.427456],
-          [Date.UTC(2022, 2, '', 8),  28.438202],[Date.UTC(2022, 2, '', 9),  50.262425],
-          [Date.UTC(2022, 2, '', 10),63.507733],[Date.UTC(2022, 2, '', 11), 75.350926],
-          [Date.UTC(2022, 2, '', 12), 80.142792],[Date.UTC(2022, 2, '', 13), 92.436686],
-          [Date.UTC(2022, 2, '', 14), 97.049528],[Date.UTC(2022, 2, '', 15), 89.064622],
-          [Date.UTC(2022, 2, '', 16), 84.937532],[Date.UTC(2022, 2, '', 17), 68.553161],
-          [Date.UTC(2022, 2, '', 18), 57.789710],[Date.UTC(2022, 2, '', 19), 58.174423],
-          [Date.UTC(2022, 2, '', 20), 51.177688],[Date.UTC(2022, 2, '', 21), 44.962705],
-          [Date.UTC(2022, 2, '', 22), 54.220823],[Date.UTC(2022, 2, '', 23), 47.912453],
-           ]
         
-    },
-
     {
-      
-      name: [("Icaraí - 30/03")],
-      type:"line",
-      
-      
-      data: [
-        [Date.UTC(2022, 2, '', 00), 0.547],[Date.UTC(2022, 2, '', 1), 3.64],[
-          Date.UTC(2022, 2, '', 2), 14.71],[Date.UTC(2022, 2, '', 3), 18.477],
-          [Date.UTC(2022, 2, '', 4), 13.477],[Date.UTC(2022, 2, '', 5), 9.87],
-          [Date.UTC(2022, 2, '', 6), 32.69],[Date.UTC(2022, 2, '', 7), 100.2],
-          [Date.UTC(2022, 2, '', 8), 40.10],[Date.UTC(2022, 2, '', 9), 59.16],
-          [Date.UTC(2022, 2, '', 10), 25.9],[Date.UTC(2022, 2, '', 11), 9.949],
-          [Date.UTC(2022, 2, '', 12), 14.44],[Date.UTC(2022, 2, '', 13), 12.98],
-          [Date.UTC(2022, 2, '', 14), 0.6],[Date.UTC(2022, 2, '', 15), 7.14],
-          [Date.UTC(2022, 2, '', 16), 22.79],[Date.UTC(2022, 2, '', 17), 45.66],
-          [Date.UTC(2022, 2, '', 18), 43.81],[Date.UTC(2022, 2, '', 19), 42.12],
-          [Date.UTC(2022, 2, '', 20), 18.38],[Date.UTC(2022, 2, '', 21), 20.57],
-          [Date.UTC(2022, 2, '', 22), 15.96],[Date.UTC(2022, 2, '', 23), 22.5],
-           ]
         
+            
+        name: [("Icarai - Média")],
+        
+        type:"spline",
+        color:'#EBDAF0',
+      
+        data: [15.236,10.756,9.637,8.585,8.8,9.456,11.889,9.743,8.401,16.278,22.7117,31.850,34.856,37.771,37.033,31.910,28.5,23.81,21.5,20.75,18.5,16.056,17.768,16.011,],
+        pointStart: Date.UTC(2022, 2, 30),
+        pointInterval: 3600 * 1000 // one hour
     },
     
-         
-  ]
+    {           
+        name: [("Icaraí - Banda superior")],
+        
+        type:"spline",
+        color:'#E23D20',
+        
+      
+        data: [49.052214,35.860593,30.875333,26.730744,23.521892,24.902830,33.076802,46.427456,28.438202,50.262425,63.507733,75.350926,80.142792,92.436686,97.049528,89.064622,84.937532,68.553161,57.789710,58.174423,51.177688,44.962705,54.220823,47.912453,],
+        pointStart: Date.UTC(2022, 2, 30),
+        pointInterval: 3600 * 1000 // one hour
+    },
+     
+     {
+       
+              
+            
+        name: [("Icaraí - 30/03")],
+        
+        type:"spline",
+        color: '#4291E7',
 
 
-  
+        data: [0.547,3.64,14.71,18.477,13.477,9.87,32.69,{ y:100.2,  marker: { fillColor: 'black', symbol: 'circle',enabled: true, radius: 5.5,}},{y:40.10,marker: { fillColor: 'black', symbol: 'circle',enabled: true, radius: 5.5,}},{y:59.16, marker: { fillColor: 'black', symbol: 'circle',enabled: true, radius: 5.5,}},25.9,9.949,14.44,12.98,0.6,
+        7.14,22.79,45.66,43.81,42.12,18.38,20.57,15.96,22.5],
+        pointStart: Date.UTC(2022, 2, 30),
+        pointInterval: 3600 * 1000 // one hour
+    }
+
+
+]
 });
 
-Highcharts.setOptions({
+ Highcharts.setOptions({
     lang: {
         months: ['Jan', 'Fév', 'Mar', 'Abr', 'Mai', 'Jun',  'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
         weekdays: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab']
     }
 });
-Highcharts.chart('container4', {
-  chart: {
-    type: 'scatter',
-    
-  },
+Highcharts.chart("container4", {
+                chart: {
+                    type: "spline",
+                    
+                },
+  
+  
   title: {
-    text: 'Praia Formosa - Média, máximas e picos'
+    text: 'Icaraí - Média, máximas e picos'
   },
   subtitle: {
     text: 'Energia Eólica produzida em MWmed - referente ao mês de Março de 2022.'
   },
-  xAxis: {
+  xAxis: {     
+    //crosshair: true,
     alternateGrid: 'true',
     styledMode: 'true',
     type: 'datetime',
     alternateGridColor: '#FBFDFF',
     
-   
-    
-
     dateTimeLabelFormats: { // don't display the year
       month: '%e. %b',
       year: '%b',
-      
     },
     title: {
-      text: 'Data'
-      
-      
+      text: ''
+       
     }
   },
   yAxis: {
     
+    
     title: {
       text: 'Geração(MWmed)',
-      style: {
-                color: 'grey'
-            },  
+       
     },
     
   },
@@ -721,11 +699,23 @@ Highcharts.chart('container4', {
 
   plotOptions: {
     series: {
-      marker: {
-        enabled: true,
-        radius: 2.5,
-         inside: true,
+      
+      
+      
+      events: {
+                //click: function () {
+                    //alert('blablabla');
+                //}
+            },
+         
+          marker: {
+         
+          enabled: false,
+          radius: 3.5,
+          inside: true,
+         
       }
+      
     }
   },
 
@@ -735,80 +725,48 @@ Highcharts.chart('container4', {
   // to be compared on the same x axis. Note that in JavaScript, months start
   // at 0 for January, 1 for February etc.
   series: [
-    
-
-    {
-      name: [("Praia Formosa - Média")],
-      showInLegend: true,
-      type:"line",
-      
-      
-      data: [
-        [Date.UTC(2022, 2, '', 00),1.88],[Date.UTC(2022, 2, '', 1), 2.29],
-          [Date.UTC(2022, 2, '', 2), 2.257],[Date.UTC(2022, 2, '', 3), 2.58],
-          [Date.UTC(2022, 2, '', 4), 3.60],[Date.UTC(2022, 2, '', 5), 5.31],
-          [Date.UTC(2022, 2, '', 6),5.7],[Date.UTC(2022, 2, '', 7), 2.28],
-          [Date.UTC(2022, 2, '', 8), 2.39],[Date.UTC(2022, 2, '', 9), 3.754],
-          [Date.UTC(2022, 2, '', 10), 7.838],[Date.UTC(2022, 2, '', 11), 8.948],
-          [Date.UTC(2022, 2, '', 12), 14.204],[Date.UTC(2022, 2, '', 13), 15.97],
-          [Date.UTC(2022, 2, '', 14), 21.2],[Date.UTC(2022, 2, '', 15), 17.3],
-          [Date.UTC(2022, 2, '', 16), 17.68],[Date.UTC(2022, 2, '', 17), 17.0],
-          [Date.UTC(2022, 2, '', 18), 16.15],[Date.UTC(2022, 2, '', 19), 13.3],
-          [Date.UTC(2022, 2, '', 20), 10.2],[Date.UTC(2022, 2, '', 21), 7.88],
-          [Date.UTC(2022, 2, '', 22), 5.33],[Date.UTC(2022, 2, '', 23), 3.17]
-      ]
-    },
-    {
-      
-      name: [("Praia Formosa - Banda superior")],
-      type:"line",
-      
-      
-      data: [
-        [Date.UTC(2022, 2, '', 00), 10.15412746],[Date.UTC(2022, 2, '', 1), 10.43646437],[
-          Date.UTC(2022, 2, '', 2), 8.99141859],[Date.UTC(2022, 2, '', 3), 8.72853392],
-          [Date.UTC(2022, 2, '', 4),11.93701331],[Date.UTC(2022, 2, '', 5),  20.868658746],
-          [Date.UTC(2022, 2, '', 6),  16.33860352],[Date.UTC(2022, 2, '', 7),   7.90025144],
-          [Date.UTC(2022, 2, '', 8),  11.95731551],[Date.UTC(2022, 2, '', 9),  13.99318513],
-          [Date.UTC(2022, 2, '', 10),25.75031539],[Date.UTC(2022, 2, '', 11), 28.56075934],
-          [Date.UTC(2022, 2, '', 12), 42.78424116],[Date.UTC(2022, 2, '', 13), 45.37199412],
-          [Date.UTC(2022, 2, '', 14), 57.9986187],[Date.UTC(2022, 2, '', 15), 50.166802],
-          [Date.UTC(2022, 2, '', 16), 54.72367396],[Date.UTC(2022, 2, '', 17), 58.23002262],
-          [Date.UTC(2022, 2, '', 18), 59.39385421],[Date.UTC(2022, 2, '', 19), 50.72588148],
-          [Date.UTC(2022, 2, '', 20), 43.0789696],[Date.UTC(2022, 2, '', 21),36.02633784],
-          [Date.UTC(2022, 2, '', 22), 21.31908217],[Date.UTC(2022, 2, '', 23), 14.23465249],
-           ]
         
-    },
-
-    {
-      
-      name: [("Praia Formosa - 18/03")],
-      type:"line",
-      
-      
-      data: [
-        [Date.UTC(2022, 2, '', 00), 1.148],[Date.UTC(2022, 2, '', 1), 3.777],[
-          Date.UTC(2022, 2, '', 2), 3.303],[Date.UTC(2022, 2, '', 3), 1.907],
-          [Date.UTC(2022, 2, '', 4), 3.528],[Date.UTC(2022, 2, '', 5), 10.365],
-          [Date.UTC(2022, 2, '', 6), 13.529],[Date.UTC(2022, 2, '', 7), 4.655],
-          [Date.UTC(2022, 2, '', 8), 4.298],[Date.UTC(2022, 2, '', 9), 10.729],
-          [Date.UTC(2022, 2, '', 10), 8.816],[Date.UTC(2022, 2, '', 11), 25.538],
-          [Date.UTC(2022, 2, '', 12), 11.711],[Date.UTC(2022, 2, '', 13), 16.915],
-          [Date.UTC(2022, 2, '', 14), 47.274],[Date.UTC(2022, 2, '', 15), 33.114],
-          [Date.UTC(2022, 2, '', 16), 36.493],[Date.UTC(2022, 2, '', 17), 57.417],
-          [Date.UTC(2022, 2, '', 18), 57.773],[Date.UTC(2022, 2, '', 19), 57.856],
-          [Date.UTC(2022, 2, '', 20), 57.856],[Date.UTC(2022, 2, '', 21), 57.856],
-          [Date.UTC(2022, 2, '', 22), 20.994],[Date.UTC(2022, 2, '', 23), 5.39],
-           ]
+  {
         
+            
+        name: [("Praia Formosa - Média")],
+        
+        type:"spline",
+        color:'#EBDAF0',
+      
+        data: [1.88,2.29,2.257,2.58,3.60,5.31,5.7,2.28,2.39,3.754,7.838,8.948,14.204,15.97,21.2,17.3,17.68,17.0,16.15,13.3,10.2,7.88,5.33,3.17,],
+        pointStart: Date.UTC(2022, 2, 18),
+        pointInterval: 3600 * 1000 // one hour
     },
-    
-         
-  ]
+  {     
+        name: [("Praia Formosa - Banda superior")],
+        
+        type:"spline",
+        color:'#E23D20',
+
+        
+      
+        data: [10.15412746,10.43646437,8.99141859,8.72853392,11.93701331,20.868658746,16.33860352,7.90025144,11.95731551,13.99318513,25.75031539,28.56075934,42.78424116,45.37199412,57.9986187,50.166802,54.72367396,58.23002262,59.39385421,50.72588148,43.0789696,36.02633784,21.31908217,14.23465249,],
+        pointStart: Date.UTC(2022, 2, 18),
+        pointInterval: 3600 * 1000 // one hour
+    },
+     
+     {
+       
+              
+            
+        name: [("Praia Formosa - 18/03")],
+        
+        type:"spline",
+        color: '#4291E7',
+        
+        data: [1.148,3.777,3.303,1.907,3.528,10.365,13.529,4.655,4.298,10.729,8.816,25.538,11.711,16.915,47.274,33.114,36.493,57.417 ,57.773, {y:57.856, marker: { fillColor: 'black', symbol: 'circle',enabled: true, radius: 5.5,}}, {y:57.856, marker: { fillColor: 'black', symbol: 'circle',enabled: true, radius: 5.5,}}, {y:57.856, marker: { fillColor: 'black', symbol: 'circle',enabled: true, radius: 5.5,}},20.994,5.39,],
+        pointStart: Date.UTC(2022, 2, 18),
+        pointInterval: 3600 * 1000 // one hour
+    }
 
 
-  
+]
 });
 
 Highcharts.setOptions({
@@ -817,44 +775,41 @@ Highcharts.setOptions({
         weekdays: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab']
     }
 });
-Highcharts.chart('container5', {
-  chart: {
-    type: 'scatter',
-    
-  },
+Highcharts.chart("container5", {
+                chart: {
+                    type: "spline",
+                    
+                },
+  
+  
   title: {
-    text: 'Dracena - Média, máximas e picos'
+    text: 'Icaraí - Média, máximas e picos'
   },
   subtitle: {
-    text: 'Energia Solar produzida em MWmed - referente ao mês de Março de 2022.'
+    text: 'Energia Eólica produzida em MWmed - referente ao mês de Março de 2022.'
   },
-  xAxis: {
+  xAxis: {     
+    //crosshair: true,
     alternateGrid: 'true',
     styledMode: 'true',
     type: 'datetime',
     alternateGridColor: '#FBFDFF',
     
-   
-    
-
     dateTimeLabelFormats: { // don't display the year
       month: '%e. %b',
       year: '%b',
-      
     },
     title: {
-      text: 'Data'
-      
-      
+      text: ''
+       
     }
   },
   yAxis: {
     
+    
     title: {
       text: 'Geração(MWmed)',
-      style: {
-                color: 'grey'
-            },  
+       
     },
     
   },
@@ -873,11 +828,23 @@ Highcharts.chart('container5', {
 
   plotOptions: {
     series: {
-      marker: {
-        enabled: true,
-        radius: 2.5,
-         inside: true,
+      
+      
+      
+      events: {
+                //click: function () {
+                    //alert('blablabla');
+                //}
+            },
+         
+          marker: {
+         
+          enabled: false,
+          radius: 3.5,
+          inside: true,
+         
       }
+      
     }
   },
 
@@ -887,127 +854,90 @@ Highcharts.chart('container5', {
   // to be compared on the same x axis. Note that in JavaScript, months start
   // at 0 for January, 1 for February etc.
   series: [
-    
-
-    {
-      name: [("Dracena - Média")],
-      showInLegend: true,
-      type:"line",
-      
-      
-      data: [
-        [Date.UTC(2022, 2,'', 00),0],[Date.UTC(2022, 2,'', 1), 0],
-          [Date.UTC(2022, 2,'', 2), 0],[Date.UTC(2022, 2,'', 3), 0],
-          [Date.UTC(2022, 2,'', 4), 0],[Date.UTC(2022, 2,'', 5), 0],
-          [Date.UTC(2022, 2,'', 6),0],[Date.UTC(2022, 2,'', 7), 10.14],
-          [Date.UTC(2022, 2,'', 8), 33.15],[Date.UTC(2022, 2,'', 9), 46.62],
-          [Date.UTC(2022, 2,'', 10), 53.36],[Date.UTC(2022, 2,'', 11), 56.88],
-          [Date.UTC(2022, 2,'', 12), 57.00],[Date.UTC(2022, 2,'', 13), 54.04],
-          [Date.UTC(2022, 2,'', 14), 42.18],[Date.UTC(2022, 2,'', 15), 37.39],
-          [Date.UTC(2022, 2,'', 16),30.58],[Date.UTC(2022, 2,'', 17), 13.9],
-          [Date.UTC(2022, 2,'', 18), 1.08],[Date.UTC(2022, 2,'', 19), 0],
-          [Date.UTC(2022, 2,'', 20), 0],[Date.UTC(2022, 2,'', 21), 0],
-          [Date.UTC(2022, 2,'', 22), 0],[Date.UTC(2022, 2,'', 23), 0],
-           ]
-           
-    },
-    {
-      
-      name: [("Dracena - Banda superior")],
-      type:"line",
-      
-      
-      data: [
-        [Date.UTC(2022, 2, '', 00), 0.00000000],[Date.UTC(2022, 2, '', 1), 0.00000000],[
-          Date.UTC(2022, 2, '', 2), 0.00000000],[Date.UTC(2022, 2, '', 3), 0.00000000],
-          [Date.UTC(2022, 2, '', 4), 0.00000000],[Date.UTC(2022, 2, '', 5),   27.60341086],
-          [Date.UTC(2022, 2, '', 6),  44.47622197],[Date.UTC(2022, 2, '', 7),   43.96111280],
-          [Date.UTC(2022, 2, '', 8),  58.02475130],[Date.UTC(2022, 2, '', 9),  59.04329861],
-          [Date.UTC(2022, 2, '', 10),68.91620332],[Date.UTC(2022, 2, '', 11), 68.38483736],
-          [Date.UTC(2022, 2, '', 12), 58.43606280],[Date.UTC(2022, 2, '', 13), 58.51045276],
-          [Date.UTC(2022, 2, '', 14), 49.21165719],[Date.UTC(2022, 2, '', 15), 48.51358415],
-          [Date.UTC(2022, 2, '', 16), 47.63866686],[Date.UTC(2022, 2, '', 17), 34.84544109],
-          [Date.UTC(2022, 2, '', 18), 31.07323366],[Date.UTC(2022, 2, '', 19), 1.88562310],
-          [Date.UTC(2022, 2, '', 20), 0.00000000],[Date.UTC(2022, 2, '', 21), 0.00000000],
-          [Date.UTC(2022, 2, '', 22), 0.00000000],[Date.UTC(2022, 2, '', 23), 0.00000000],
-           ]
         
-    },
-
-    {
-      
-      name: [("Dracena - 05/03")],
-      type:"line",
-      
-      
-      data: [
-        [Date.UTC(2022, 2, '', 00), 0],[Date.UTC(2022, 2, '', 1), 0],[
-          Date.UTC(2022, 2, '', 2), 0],[Date.UTC(2022, 2, '', 3), 0],
-          [Date.UTC(2022, 2, '', 4), 0],[Date.UTC(2022, 2, '', 5), 0],
-          [Date.UTC(2022, 2, '', 6), 0.423],[Date.UTC(2022, 2, '', 7), 19.426],
-          [Date.UTC(2022, 2, '', 8), 52.366],[Date.UTC(2022, 2, '', 9), 63.896],
-          [Date.UTC(2022, 2, '', 10), 68.26],[Date.UTC(2022, 2, '', 11), 68.805],
-          [Date.UTC(2022, 2, '', 12), 68.82],[Date.UTC(2022, 2, '', 13), 62.269],
-          [Date.UTC(2022, 2, '', 14), 58.711],[Date.UTC(2022, 2, '', 15), 10.843],
-          [Date.UTC(2022, 2, '', 16), 5.428],[Date.UTC(2022, 2, '', 17), 10.274],
-          [Date.UTC(2022, 2, '', 18), 2.563],[Date.UTC(2022, 2, '', 19), 0],
-          [Date.UTC(2022, 2, '', 20), 0],[Date.UTC(2022, 2, '', 21), 0],
-          [Date.UTC(2022, 2, '', 22), 0],[Date.UTC(2022, 2, '', 23), 0],
-           ]
+  {
         
+            
+        name: [("Dracena - Média")],
+        
+        type:"spline",
+        color:'#EBDAF0',
+      
+        data: [0,0,0,0,0,0,0,10.14,33.15,46.62,53.36,56.88,57.00,54.04,42.18,37.39,30.58,13.9,1.08,0,0,0,0,0],
+        pointStart: Date.UTC(2022, 2, 5),
+        pointInterval: 3600 * 1000 // one hour
     },
-    
-         
-  ]
+  {     
+        name: [("Dracena - Banda superior")],
+        
+        type:"spline",
+        color:'#E23D20',
+        
+      
+        data: [0,0,0,0,0,0, 0.7999442, 7.7376054,17.698802,152.14449995,180.44048952,192.50604483,180.45127485,175.83689761,148.00033089,117.04096597,72.42073509,24.3596361,3.11666068,0,0,0,0,0],
+        pointStart: Date.UTC(2022, 2, 5),
+        pointInterval: 3600 * 1000 // one hour
+    },
+     
+     {
+       
+              
+            
+        name: [("Dracena - 05/03")],
+        
+        type:"spline",
+         color: '#4291E7',
+        data: [0,0,0,0,0,0.423,19.426,52.366,63.896,68.26,68.805,68.82,62.269,58.711,10.843,5.428,10.274,2.563,0,0,0,0,0],
+        pointStart: Date.UTC(2022, 2, 5),
+        pointInterval: 3600 * 1000 // one hour
+    }
 
 
-  
+]
 });
 
-Highcharts.setOptions({
+
+ Highcharts.setOptions({
     lang: {
         months: ['Jan', 'Fév', 'Mar', 'Abr', 'Mai', 'Jun',  'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
         weekdays: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab']
     }
 });
-Highcharts.chart('container6', {
-  chart: {
-    type: 'scatter',
-    
-  },
+Highcharts.chart("container6", {
+                chart: {
+                    type: "spline",
+                    
+                },
+  
+  
   title: {
-    text: 'Getulina - Conj. Guaimbé - Média, máximas e picos'
+    text: 'Icaraí - Média, máximas e picos'
   },
   subtitle: {
-    text: 'Energia Solar produzida em MWmed - referente ao mês de Março de 2022.'
+    text: 'Energia Eólica produzida em MWmed - referente ao mês de Março de 2022.'
   },
-  xAxis: {
+  xAxis: {     
+    //crosshair: true,
     alternateGrid: 'true',
     styledMode: 'true',
     type: 'datetime',
     alternateGridColor: '#FBFDFF',
     
-   
-    
-
     dateTimeLabelFormats: { // don't display the year
       month: '%e. %b',
       year: '%b',
-      
     },
     title: {
-      text: 'Data'
-      
-      
+      text: ''
+       
     }
   },
   yAxis: {
     
+    
     title: {
-      text: 'Geração (MWmed)',
-      style: {
-                color: 'grey'
-            },  
+      text: 'Geração(MWmed)',
+       
     },
     
   },
@@ -1026,11 +956,23 @@ Highcharts.chart('container6', {
 
   plotOptions: {
     series: {
-      marker: {
-        enabled: true,
-        radius: 2.5,
-         inside: true,
+      
+      
+      
+      events: {
+                //click: function () {
+                    //alert('blablabla');
+                //}
+            },
+         
+          marker: {
+         
+          enabled: false,
+          radius: 3.5,
+          inside: true,
+         
       }
+      
     }
   },
 
@@ -1040,83 +982,47 @@ Highcharts.chart('container6', {
   // to be compared on the same x axis. Note that in JavaScript, months start
   // at 0 for January, 1 for February etc.
   series: [
-    
-
-    {
-      name: [("Conj. Guaimbé - Média")],
-      showInLegend: true,
-      type:"line",
-      
-      
-      data: [
-        [Date.UTC(2022, 2, '', 00),0],[Date.UTC(2022, 2, '', 1), 0],
-          [Date.UTC(2022, 2, '', 2), 0],[Date.UTC(2022, 2, '', 3), 0],
-          [Date.UTC(2022, 2, '', 4), 0],[Date.UTC(2022, 2, '', 5), 0],
-          [Date.UTC(2022, 2, '', 6),19.837232838709674],[Date.UTC(2022, 2, '', 7), 17.06],
-          [Date.UTC(2022, 2, '', 8), 45.81],[Date.UTC(2022, 2, '', 9), 74.24],
-          [Date.UTC(2022, 2, '', 10), 91.72],[Date.UTC(2022, 2, '', 11), 104.15],
-          [Date.UTC(2022, 2, '', 12), 103.91],[Date.UTC(2022, 2, '', 13), 99.53],
-          [Date.UTC(2022, 2, '', 14), 87.38],[Date.UTC(2022, 2, '', 15), 70.50],
-          [Date.UTC(2022, 2, '', 16), 42.798],[Date.UTC(2022, 2, '', 17), 14.07],
-          [Date.UTC(2022, 2, '', 18), 1.019],[Date.UTC(2022, 2, '', 19), 0],
-          [Date.UTC(2022, 2, '', 20), 0],[Date.UTC(2022, 2, '', 21), 0],
-          [Date.UTC(2022, 2, '', 22), 0],[Date.UTC(2022, 2, '', 23), 0],
-           ]
-           
-    },
-    {
-      
-      name: [("Conj. Guaimbé - Banda superior")],
-      type:"line",
-      
-      
-      data: [
-        [Date.UTC(2022, 2, '', 00), 0],[Date.UTC(2022, 2, '', 1), 0],[
-          Date.UTC(2022, 2, '', 2), 0],[Date.UTC(2022, 2, '', 3), 0],
-          [Date.UTC(2022, 2, '', 4), 0],[Date.UTC(2022, 2, '', 5),   0],
-          [Date.UTC(2022, 2, '', 6),  0.7999442],[Date.UTC(2022, 2, '', 7),   7.7376054],
-          [Date.UTC(2022, 2, '', 8),  17.698802],[Date.UTC(2022, 2, '', 9),  152.14449995],
-          [Date.UTC(2022, 2, '', 10),180.44048952],[Date.UTC(2022, 2, '', 11), 192.50604483],
-          [Date.UTC(2022, 2, '', 12), 180.45127485],[Date.UTC(2022, 2, '', 13), 175.83689761],
-          [Date.UTC(2022, 2, '', 14), 148.00033089],[Date.UTC(2022, 2, '', 15), 117.04096597],
-          [Date.UTC(2022, 2, '', 16), 72.42073509],[Date.UTC(2022, 2, '', 17), 24.3596361],
-          [Date.UTC(2022, 2, '', 18), 3.11666068],[Date.UTC(2022, 2, '', 19), 0],
-          [Date.UTC(2022, 2, '', 20), 0],[Date.UTC(2022, 2, '', 21), 0],
-          [Date.UTC(2022, 2, '', 22), 0],[Date.UTC(2022, 2, '', 23), 0],
-           ]
         
-    },
-
-    {
-      
-      name: [("Conj. Guaimbé - 21/03")],
-      type:"line",
-      
-      
-      data: [
-        [Date.UTC(2022, 2, '', 00), 0],[Date.UTC(2022, 2, '', 1), 0],[
-          Date.UTC(2022, 2, '', 2), 0],[Date.UTC(2022, 2, '', 3), 0],
-          [Date.UTC(2022, 2, '', 4), 0],[Date.UTC(2022, 2, '', 5), 0],
-          [Date.UTC(2022, 2, '', 6), 0.806],[Date.UTC(2022, 2, '', 7), 16.618],
-          [Date.UTC(2022, 2, '', 8), 68.299],[Date.UTC(2022, 2, '', 9), 102.485],
-          [Date.UTC(2022, 2, '', 10), 126],[Date.UTC(2022, 2, '', 11), 138.946],
-          [Date.UTC(2022, 2, '', 12), 142.171],[Date.UTC(2022, 2, '', 13), 137.563],
-          [Date.UTC(2022, 2, '', 14), 121.752],[Date.UTC(2022, 2, '', 15), 82.037],
-          [Date.UTC(2022, 2, '', 16), 49.104],[Date.UTC(2022, 2, '', 17), 14.846],
-          [Date.UTC(2022, 2, '', 18), 1.166],[Date.UTC(2022, 2, '', 19), 0],
-          [Date.UTC(2022, 2, '', 20), 0],[Date.UTC(2022, 2, '', 21), 0],
-          [Date.UTC(2022, 2, '', 22), 0],[Date.UTC(2022, 2, '', 23), 0],
-           ]
+  {
         
+            
+        name: [("Conj. Guaimbé - Média")],
+        
+        type:"spline",
+        color:'#EBDAF0',
+      
+        data: [0,0,0,0,0,0,19.8372,17.06,45.81,74.24,91.72,104.15,103.91,99.53,87.38,70.50,42.798,14.07,1.019,0,0,0,0,0],
+        pointStart: Date.UTC(2022, 2, 21),
+        pointInterval: 3600 * 1000 // one hour
     },
-    
-         
-  ]
+  {     
+        name: [("Conj. Guaimbé - Banda superior")],
+        
+        type:"spline",
+        color:'#E23D20',
+        
+      
+        data: [0,0,0,0,0,0, 0.7999442, 7.7376054,17.698802,152.14449995,180.44048952,192.50604483,180.45127485,175.83689761,148.00033089,117.04096597,72.42073509,24.3596361,3.11666068,0,0,0,0,0],
+        pointStart: Date.UTC(2022, 2, 21),
+        pointInterval: 3600 * 1000 // one hour
+    },
+     
+     {
+       
+              
+            
+        name: [("Conj. Guaimbé - 21/03")],
+        
+        type:"spline",
+         color: '#4291E7',
+        data: [0,0,0,0,0,0,0.806,{y:16.618, marker: { fillColor: 'black', symbol: 'circle',enabled: true, radius: 5.5}}, {y:68.299, marker: { fillColor: 'black', symbol: 'circle',enabled: true, radius: 5.5,}},102.485,126,138.946,142.171,137.563,121.752,82.037,49.104,14.846,1.166,0,0,0,0,0],
+        pointStart: Date.UTC(2022, 2, 21),
+        pointInterval: 3600 * 1000 // one hour
+    }
 
 
-  
+]
 });
-
 
 console.log(
        'Current time in Brasília',

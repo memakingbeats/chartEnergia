@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+         <link rel="stylesheet" href="style2.css" />
+    </head>
+    <body>
+        <div
+            id="container4"
+            style="min-width: 310px; height: 400px; margin: 0 auto"
+        ></div>
+
+        <script>
+            Highcharts.setOptions({
+    lang: {
+        months: ['Jan', 'Fév', 'Mar', 'Abr', 'Mai', 'Jun',  'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        weekdays: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab']
+    }
+});
+Highcharts.chart("container5", {
+                chart: {
+                    type: "spline",
+                    
+                },
+  
+  
+  title: {
+    text: 'Icaraí - Média, máximas e picos'
+  },
+  subtitle: {
+    text: 'Energia Eólica produzida em MWmed - referente ao mês de Março de 2022.'
+  },
+  xAxis: {     
+    //crosshair: true,
+    alternateGrid: 'true',
+    styledMode: 'true',
+    type: 'datetime',
+    alternateGridColor: '#FBFDFF',
+    
+    dateTimeLabelFormats: { // don't display the year
+      month: '%e. %b',
+      year: '%b',
+    },
+    title: {
+      text: ''
+       
+    }
+  },
+  yAxis: {
+    
+    
+    title: {
+      text: 'Geração(MWmed)',
+       
+    },
+    
+  },
+  //tooltip: {
+    //headerFormat: '<b>{series.name}</b><br>',
+    //pointFormat: '{point.x:%e. %b}: {point.y:.2f} MWmed'  
+  //},
+
+  tooltip: {
+    
+        pointFormat: '{series.name}: <b>{point.y:.2f} MWmed</b><br/>',
+        valueSuffix: ' MWmed',
+        shared: true,
+    },
+
+
+  plotOptions: {
+    series: {
+      
+      
+      
+      events: {
+                //click: function () {
+                    //alert('blablabla');
+                //}
+            },
+         
+          marker: {
+         
+          enabled: false,
+          radius: 3.5,
+          inside: true,
+         
+      }
+      
+    }
+  },
+
+  colors: ['#FF6A4A', '#3772BA', '#239B56', '#FF6A4A', '#239B56','#FF6A4A', '#239B56', '#FF6A4A'],
+
+  // Define the data points. All series have a year of 20222022/71 in order
+  // to be compared on the same x axis. Note that in JavaScript, months start
+  // at 0 for January, 1 for February etc.
+  series: [
+        
+  {
+        
+            
+        name: [("Dracena - Média")],
+        
+        type:"spline",
+      
+        data: [0,0,0,0,0,0,0,10.14,33.15,46.62,53.36,56.88,57.00,54.04,42.18,37.39,30.58,13.9,1.08,0,0,0,0,0],
+        pointStart: Date.UTC(2022, 2, 5),
+        pointInterval: 3600 * 1000 // one hour
+    },
+  {     
+        name: [("Dracena - Banda superior")],
+        
+        type:"spline",
+        
+      
+        data: [0,0,0,0,0,0, 0.7999442, 7.7376054,17.698802,152.14449995,180.44048952,192.50604483,180.45127485,175.83689761,148.00033089,117.04096597,72.42073509,24.3596361,3.11666068,0,0,0,0,0],
+        pointStart: Date.UTC(2022, 2, 5),
+        pointInterval: 3600 * 1000 // one hour
+    },
+     
+     {
+       
+              
+            
+        name: [("Dracena - 05/03")],
+        
+        type:"spline",
+        color: 'red',
+        data: [0,0,0,0,0,0.423,19.426,52.366,63.896,68.26,68.805,68.82,62.269,58.711,10.843,5.428,10.274,2.563,0,0,0,0,0],
+        pointStart: Date.UTC(2022, 2, 5),
+        pointInterval: 3600 * 1000 // one hour
+    }
+
+
+]
+});
+
+        </script>
+    </body>
+</html>
