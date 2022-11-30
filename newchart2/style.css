@@ -17,18 +17,24 @@ body{
   box-shadow: 2 3 3  #012f05;
 }
 .p1{
-  text-align: justify;
-  font-size: 23px;
-  margin: 20px;
+  font-size: larger;
+  text-align: center;
+  padding: 45px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .artigo{
-  text-align: justify;
+  font-size: larger;
+  text-align: center;
   padding: 45px;
   margin-top: -150px;
   margin-bottom: 100px;
   
   
+}
+.highcharts-figure{
+  margin-top: 40px;
 }
 
 .navbar-brand2{
