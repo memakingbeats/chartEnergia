@@ -7,6 +7,8 @@ body{
   
 }
 
+
+
 .highcharts-point {
     stroke: white;
 }
@@ -15,9 +17,24 @@ body{
   box-shadow: 2 3 3  #012f05;
 }
 .p1{
-  text-align: center;
+  text-align: justify;
   font-size: 23px;
   margin: 20px;
+}
+
+.artigo{
+  text-align: justify;
+  padding: 45px;
+  margin-top: -150px;
+  margin-bottom: 100px;
+  
+  
+}
+
+.navbar-brand2{
+  position: absolute;
+  right: 50px;
+
 }
 
 
