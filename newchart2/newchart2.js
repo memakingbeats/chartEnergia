@@ -524,7 +524,7 @@ Highcharts.chart("container3", {
   
   
   title: {
-    text: 'Icaraí - Média, máximas e picos'
+    text: 'Icaraí - Média, banda superior e picos'
   },
   subtitle: {
     text: 'Energia Eólica produzida em MWmed - referente ao mês de Março de 2022.'
@@ -655,7 +655,7 @@ Highcharts.chart("container4", {
   
   
   title: {
-    text: 'Icaraí - Média, máximas e picos'
+    text: 'Icaraí - Média, banda superior e picos'
   },
   subtitle: {
     text: 'Energia Eólica produzida em MWmed - referente ao mês de Março de 2022.'
@@ -784,7 +784,7 @@ Highcharts.chart("container5", {
   
   
   title: {
-    text: 'Icaraí - Média, máximas e picos'
+    text: 'Icaraí - Média, banda superior e picos'
   },
   subtitle: {
     text: 'Energia Eólica produzida em MWmed - referente ao mês de Março de 2022.'
@@ -875,7 +875,7 @@ Highcharts.chart("container5", {
         color:'#E23D20',
         
       
-        data: [0,0,0,0,0,0.9,23.626,60.366,74,79.26,69.805,70.82,70.269,66,15.,7.,10.,4.,0,0,0,0,0],
+        data: [0,0,0,0,0,15,19.4,62,67.6,69.2,68.4,60,59,56.9,51,55,37,16.0,2,0,0,0,0],
         pointStart: Date.UTC(2022, 2, 5),
         pointInterval: 3600 * 1000 // one hour
     },
@@ -888,7 +888,7 @@ Highcharts.chart("container5", {
         
         type:"spline",
          color: '#4291E7',
-        data: [0,0,0,0,0,0.423,19.426,52.366,63.896,68.26,68.805,68.82,62.269,58.711,10.843,5.428,10.274,2.563,0,0,0,0,0],
+        data: [0,0,0,0,0,0.423,19.426,52.366,63.896,68.26,{y:68.805, marker: { fillColor: 'black', symbol: 'circle',enabled: true, radius: 5.5,}},{y:68.82, marker: { fillColor: 'black', symbol: 'circle',enabled: true, radius: 5.5,}},{y:62.269, marker: { fillColor: 'black', symbol: 'circle',enabled: true, radius: 5.5,}},58.711,10.843,5.428,10.274,2.563,0,0,0,0,0],
         pointStart: Date.UTC(2022, 2, 5),
         pointInterval: 3600 * 1000 // one hour
     }
@@ -912,7 +912,7 @@ Highcharts.chart("container6", {
   
   
   title: {
-    text: 'Icaraí - Média, máximas e picos'
+    text: 'Icaraí - Média, banda superior e picos'
   },
   subtitle: {
     text: 'Energia Eólica produzida em MWmed - referente ao mês de Março de 2022.'
