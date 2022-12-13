@@ -7,7 +7,9 @@
 Highcharts.setOptions({
     lang: {
         months: ['Jan', 'Fév', 'Mar', 'Abr', 'Mai', 'Jun',  'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
-        weekdays: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab']
+        weekdays: ['Dom', 'Seg', ']Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
+       
+        
     }
 });
 Highcharts.chart('container', {
@@ -38,6 +40,7 @@ Highcharts.chart('container', {
     dateTimeLabelFormats: { // don't display the year
       month: '%e. %b',
       year: '%b',
+      
       
     },
     title: {
